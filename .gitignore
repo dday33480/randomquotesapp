@@ -1,1 +1,3 @@
-* .pyc
+*.pyc
+--pycache--/
+*.sqlite3
