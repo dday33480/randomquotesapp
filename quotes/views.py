@@ -11,8 +11,13 @@ def index(request):
         return render(request, "quotes/index.html", context)
 
 
-def quotes(request):
-        return HttpResponse("Ici vous pourrez générer une citation aléatoire")
+def detail(request):
+        quote_count = Quote.objects.order_by("pub_date").count()
+        context = {
+                "quote_count": quote_count,
+        }
+        return render(request, "quotes/detail.html", context)
+
 
 def results(request, quote_id):
         response = "%s."

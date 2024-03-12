@@ -1,13 +1,14 @@
-
 <h1>Citations aléatoires</h1>
 
-<h2>Bonjour, bienvenu sur l'appli de citations connues.</h2>
+<h2>Ici vous pourrez générer une citation aléatoire</h2>
 
 {% if quote_count > 0 %}
 
 <p>Cliquez sur le boutton ci-dessous pour générer une citation</p>
 
-<button><a href="{% url 'quotes:detail' %}">Générer citation</a></button>
+<button>Générer citation</button>
+
+<button><a href="{% url 'quotes:index' %}">Retour</a></button>
 
 {% else %}
     <p> Il n'y a pas de citations disponible actuellement.</p>
