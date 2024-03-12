@@ -5,7 +5,6 @@ from .models import Quote
 
 def index(request):
         quote_count = Quote.objects.order_by("pub_date").count()
-        template = loader.get_template("quotes/index.html")
         context = {
                 "quote_count": quote_count,
         }
