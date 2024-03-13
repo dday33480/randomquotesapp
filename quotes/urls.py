@@ -7,5 +7,5 @@ app_name = "quotes"
 urlpatterns = [
         path("", views.index, name="index"),
         path("detail/", views.detail, name="detail"),
-        path("<int:quote_id>/results/", views.results, name="results"),
+        path("results/", views.results, name="results"),
 ]

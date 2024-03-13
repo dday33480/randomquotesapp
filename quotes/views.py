@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
 from .models import Quote
+
+import random
 
 def index(request):
         quote_count = Quote.objects.order_by("pub_date").count()
@@ -19,6 +19,10 @@ def detail(request):
         return render(request, "quotes/detail.html", context)
 
 
-def results(request, quote_id):
-        response = "%s."
-        return HttpResponse(response % quote_id)
+def results(request):
+        quote_list = list(Quote.objects.all())
+        random_quote = random.choice(quote_list)
+        context = {
+                "random_quote": random_quote,
+        }
+        return render(request, "quotes/results.html", context)
