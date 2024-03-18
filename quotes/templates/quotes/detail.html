@@ -1,15 +1,21 @@
-<h1>Citations aléatoires</h1>
+{% extends "../base/main.html" %}
 
-<h2>Ici vous pourrez générer une citation aléatoire</h2>
+{% block template %}
 
-{% if quote_count > 0 %}
+    <h2 class="col-xs-1 text-center">Ici vous pourrez générer une citation aléatoire</h2>
 
-<p>Cliquez sur le boutton ci-dessous pour générer une citation</p>
 
-<button><a href="{% url 'quotes:results' %}">Générer citation</a></button>
+    {% if quote_count > 0 %}
 
-<button><a href="{% url 'quotes:index' %}">Retour</a></button>
+        <p class="col-xs-1 text-center">Cliquez sur le boutton ci-dessous pour générer une citation</p>
 
-{% else %}
-    <p> Il n'y a pas de citations disponible actuellement.</p>
-{% endif %}
+        <button class="btn"><a href="{% url 'quotes:results' %}">Générer citation</a></button>
+
+        <button class="btn-return"><a href="{% url 'quotes:index' %}"><< Retour</a></button>
+
+    {% else %}
+        <p> Il n'y a pas de citations disponible actuellement.</p>
+    {% endif %}
+
+
+{% endblock %}

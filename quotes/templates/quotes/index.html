@@ -1,14 +1,21 @@
+{% extends "../base/main.html" %}
 
-<h1>Citations aléatoires</h1>
+{% block template %}
 
-<h2>Bonjour, bienvenu sur l'appli de citations connues.</h2>
+    <h2 class="col-xs-1 text-center">Bonjour, bienvenu sur l'appli de citations connues.</h2>
 
-{% if quote_count > 0 %}
+    
+    {% if quote_count > 0 %}
 
-<p>Cliquez sur le boutton ci-dessous pour générer une citation</p>
+    <h2 class="col-xs-1 text-center">Nous avons actuellement {{ quote_count }} citatations dans notre base de données</h2>
 
-<button><a href="{% url 'quotes:detail' %}">Générer citation</a></button>
+    <p class="col-xs-1 text-center">Cliquez sur le boutton ci-dessous pour générer une citation</p>
 
-{% else %}
-    <p> Il n'y a pas de citations disponible actuellement.</p>
-{% endif %}
+    <button class="btn"><a href="{% url 'quotes:detail' %}">Générer citation</a></button>
+
+    {% else %}
+        <p> Il n'y a pas de citations disponible actuellement.</p>
+    {% endif %}
+
+
+{% endblock %}
