@@ -3,8 +3,18 @@
 {% block template %}
 
     <p>{{ random_quote }}</p>
-    <p>{{ author }} - {{ year }}</p>
+
+    {% if author == "Inconnu" and year < 1 %}
+        <p> Auteur Inconnu - Année Inconnu</p>
+    {% elif author == "Inconnu" and year > 0 %}
+        <p>Auteur Inconnu - {{ year }}</p>
+    {% elif author != "Inconnu" and year < 1 %}
+        <p>{{ author }} - Année Inconnu</p>
+    {% else %}
+        <p>{{ author }} - {{ year }}</p>
+    {% endif %}
 
     <button><a href="{% url 'quotes:index' %}">Acceuil</a></button>
+    <button><a href="{% url 'quotes:results'%}">Regénérer</a></button>
 
 {% endblock %}
