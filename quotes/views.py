@@ -3,6 +3,7 @@ from .models import Quote
 
 import random
 
+
 """ Get count of objects in DB for index page """
 def index(request):
         quote_count = Quote.objects.order_by("pub_date").count()
@@ -25,7 +26,11 @@ def detail(request):
 def results(request):
         quote_list = list(Quote.objects.all())
         random_quote = random.choice(quote_list)
+        author = random_quote.quote_author
+        year = random_quote.quote_year
         context = {
                 "random_quote": random_quote,
+                "author": author,
+                "year": year,
         }
         return render(request, "quotes/results.html", context)

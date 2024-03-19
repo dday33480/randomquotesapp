@@ -3,6 +3,7 @@
 {% block template %}
 
     <p>{{ random_quote }}</p>
+    <p>{{ author }} - {{ year }}</p>
 
     <button><a href="{% url 'quotes:index' %}">Acceuil</a></button>
 
