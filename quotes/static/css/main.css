@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'my_soulregular';
-    src: url('Django_Projects/randomquotesapp/randomquotesapp/quotes/static/fonts/mysoul-regular-webfont.woff2') format('woff2'),
-         url('Django_Projects/randomquotesapp/randomquotesapp/quotes/static/fonts/mysoul-regular-webfont.woff') format('woff');
+    src: url('../fonts/mysoul-regular-webfont.woff2') format('woff2'),
+         url('../fonts/mysoul-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -71,13 +71,14 @@ a {
     height: auto;
     margin-top: 120px;
     max-width: 30%;
-    padding: 50px 30px;
+    padding: 50px 30px 20px 30px;
 }
 
 #quote {
     color: black;
     font-family: 'my_soulregular', 'Times New Roman', Times, serif;
     font-size: 32px;
+    font-weight: 800;
 }
 
 #quote-detail {
