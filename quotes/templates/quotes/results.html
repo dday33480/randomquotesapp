@@ -2,17 +2,23 @@
 
 {% block template %}
 
-    <p>{{ random_quote }}</p>
+    <div class="col-xl-4 offset-4 quote-result">
+        <div id="quote">
+            <p>" {{ random_quote }} "</p>
+        </div>
 
-    {% if author == "Inconnu" and year < 1 %}
-        <p> Auteur Inconnu - Année Inconnu</p>
-    {% elif author == "Inconnu" and year > 0 %}
-        <p>Auteur Inconnu - {{ year }}</p>
-    {% elif author != "Inconnu" and year < 1 %}
-        <p>{{ author }} - Année Inconnu</p>
-    {% else %}
-        <p>{{ author }} - {{ year }}</p>
-    {% endif %}
+        <div id="quote-detail">
+            {% if author == "Inconnu" and year < 1 %}
+                <p> Auteur Inconnu - Année Inconnu</p>
+            {% elif author == "Inconnu" and year > 0 %}
+                <p>Auteur Inconnu - {{ year }}</p>
+            {% elif author != "Inconnu" and year < 1 %}
+                <p>{{ author }} - Année Inconnu</p>
+            {% else %}
+                <p>{{ author }} - {{ year }}</p>
+            {% endif %}
+        </div>
+    </div>
 
     <button><a href="{% url 'quotes:index' %}">Acceuil</a></button>
     <button><a href="{% url 'quotes:results'%}">Regénérer</a></button>
