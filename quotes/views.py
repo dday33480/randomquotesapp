@@ -28,9 +28,22 @@ def results(request):
         random_quote = random.choice(quote_list)
         author = random_quote.quote_author
         year = random_quote.quote_year
+
+        img = [
+                "../../static/images/background-images/img-1.jpg",
+                "../../static/images/background-images/img-2.jpg",
+                "../../static/images/background-images/img-3.jpg",
+                "../../static/images/background-images/img-4.jpg",
+                "../../static/images/background-images/img-5.jpg",
+                "../../static/images/background-images/img-6.jpg",
+                ]
+        rdm_choice = random.randint(0, 5)
+        bg_img = img[rdm_choice]
+
         context = {
                 "random_quote": random_quote,
                 "author": author,
                 "year": year,
+                "background": bg_img,
         }
         return render(request, "quotes/results.html", context)

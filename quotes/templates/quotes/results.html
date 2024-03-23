@@ -1,26 +1,29 @@
 {% extends "../base/main.html" %}
 
 {% block template %}
+    <div class="background-image" style="background-image: url({{ background }})">
+        <div class="quote-result-page">
+            <div class="col-xl-4 offset-4 quote-result">
+                <div id="quote">
+                    <p>" {{ random_quote }} "</p>
+                </div>
 
-    <div class="col-xl-4 offset-4 quote-result">
-        <div id="quote">
-            <p>" {{ random_quote }} "</p>
-        </div>
+                <div id="quote-detail">
+                    {% if author == "Inconnu" and year < 1 %}
+                        <p> Auteur Inconnu - Année Inconnu</p>
+                    {% elif author == "Inconnu" and year > 0 %}
+                        <p>Auteur Inconnu - {{ year }}</p>
+                    {% elif author != "Inconnu" and year < 1 %}
+                        <p>{{ author }} - Année Inconnu</p>
+                    {% else %}
+                        <p>{{ author }} - {{ year }}</p>
+                    {% endif %}
+                </div>
+            </div>
 
-        <div id="quote-detail">
-            {% if author == "Inconnu" and year < 1 %}
-                <p> Auteur Inconnu - Année Inconnu</p>
-            {% elif author == "Inconnu" and year > 0 %}
-                <p>Auteur Inconnu - {{ year }}</p>
-            {% elif author != "Inconnu" and year < 1 %}
-                <p>{{ author }} - Année Inconnu</p>
-            {% else %}
-                <p>{{ author }} - {{ year }}</p>
-            {% endif %}
+            <button class="btn-return"><a href="{% url 'quotes:index' %}">Acceuil</a></button>
+            <button class="btn"><a href="{% url 'quotes:results'%}">Regénérer</a></button>
         </div>
     </div>
-
-    <button><a href="{% url 'quotes:index' %}">Acceuil</a></button>
-    <button><a href="{% url 'quotes:results'%}">Regénérer</a></button>
 
 {% endblock %}
