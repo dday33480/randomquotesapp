@@ -65,11 +65,17 @@ a {
     background-size: 80px;
 }
 
+.quote-result-page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 75vh;
+}
+
 .quote-result {
     align-items: center;
     background-color: antiquewhite;
     height: auto;
-    margin-top: 120px;
+    margin-top: 50px;
     max-width: 30%;
     padding: 50px 30px 20px 30px;
 }
