@@ -2,6 +2,7 @@
 
 Small app that generates well known quotes randomly.
 
+---
 
 
 ## Description
@@ -10,6 +11,7 @@ Users can log on to the app/website and generate a well know quote randomly, adm
 
 This is a beginners app to get used to database connections and Git commands.
 
+---
 
 
 ### Built with
