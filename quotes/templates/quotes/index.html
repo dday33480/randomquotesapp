@@ -1,21 +1,21 @@
 {% extends "../base/main.html" %}
 
 {% block template %}
+    <container class="homepage-container">
+        <h2 class="col-xs-1 text-center">Bonjour, bienvenu sur l'appli de citations connues.</h2>
 
-    <h2 class="col-xs-1 text-center">Bonjour, bienvenu sur l'appli de citations connues.</h2>
+        
+        {% if quote_count > 0 %}
 
-    
-    {% if quote_count > 0 %}
+        <h2 class="col-xs-1 text-center">Nous avons actuellement {{ quote_count }} citatations dans notre base de données</h2>
 
-    <h2 class="col-xs-1 text-center">Nous avons actuellement {{ quote_count }} citatations dans notre base de données</h2>
+        <p class="col-xs-1 text-center">Cliquez sur le boutton ci-dessous pour générer une citation</p>
 
-    <p class="col-xs-1 text-center">Cliquez sur le boutton ci-dessous pour générer une citation</p>
+        <button class="btn"><a href="{% url 'quotes:detail' %}">Générer citation</a></button>
 
-    <button class="btn"><a href="{% url 'quotes:detail' %}">Générer citation</a></button>
-
-    {% else %}
-        <p> Il n'y a pas de citations disponible actuellement.</p>
-    {% endif %}
-
+        {% else %}
+            <p> Il n'y a pas de citations disponible actuellement.</p>
+        {% endif %}
+    </container>
 
 {% endblock %}
