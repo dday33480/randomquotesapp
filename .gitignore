@@ -1,3 +1,5 @@
 *.pyc
 --pycache--/
 *.sqlite3
+testResults/*
+db.sqlite3
