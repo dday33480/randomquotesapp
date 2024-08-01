@@ -79,7 +79,19 @@ a {
 }
 
 .btn-return:hover {
-    background-color: red;
+    background-color: green;
+    background-size: 80px;
+}
+
+.btn-home {
+    align-items: start;
+    background-color: orange;
+    margin-left: 15px;
+    margin-top: 2%;
+}
+
+.btn-home:hover {
+    background-color: green;
     background-size: 80px;
 }
 
