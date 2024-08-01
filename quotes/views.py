@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from .models import Quote
+from django.shortcuts import render, get_object_or_404
+from .models import Quote, QuoteCategory
 
 import random
 
@@ -24,7 +24,19 @@ def detail(request):
 
 """ Get all objects from DB and make random choice to dispaly random quote on results page """
 def results(request):
-        quote_list = list(Quote.objects.all())
+
+        #Get the chosen category
+        category_id = request.GET.get('category')
+
+        if category_id:
+                category = get_object_or_404(QuoteCategory, id=category_id)
+                quote_list = list(Quote.objects.filter(category=category))
+        else:
+                quote_list = list(Quote.objects.all())
+
+
+        #quote_list = list(Quote.objects.all())
+        # Generate the random quote from the specified category
         random_quote = random.choice(quote_list)
         author = random_quote.quote_author
         year = random_quote.quote_year

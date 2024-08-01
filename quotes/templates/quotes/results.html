@@ -23,9 +23,17 @@
         </div>
     </div>
 
-    <div class="navigation">
+    <div class="result-cat-selection">
+        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=2">Politique</a></button>
+        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=3">Inspirationnel</a></button>
+        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=4">Film</a></button>
+        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=1">Humour</a></button>
+        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}">Tous</a></button>
+    </div>
+
+    <div class="results-navigation">
         <button class="btn-return"><a href="{% url 'quotes:index' %}">Acceuil</a></button>
-        <button class="btn"><a href="{% url 'quotes:results'%}">Regénérer</a></button>
+        <button class="btn-return"><a href="{% url 'quotes:detail' %}"><< Retour</a></button>
     </div>
 
 {% endblock %}
