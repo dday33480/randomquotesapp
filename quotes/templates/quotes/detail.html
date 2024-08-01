@@ -1,21 +1,28 @@
 {% extends "../base/main.html" %}
 
 {% block template %}
+    <container class=""detail-page-container>
+        <h2 class="col-xs-1 text-center">Ici vous pourrez générer une citation aléatoire</h2>
 
-    <h2 class="col-xs-1 text-center">Ici vous pourrez générer une citation aléatoire</h2>
 
+        {% if quote_count > 0 %}
 
-    {% if quote_count > 0 %}
+            <p class="col-xs-1 text-center">Cliquez sur le boutton ci-dessous pour générer une citation</p>
 
-        <p class="col-xs-1 text-center">Cliquez sur le boutton ci-dessous pour générer une citation</p>
+            <button class="btn"><a href="{% url 'quotes:results' %}">Générer citation</a></button>
 
-        <button class="btn"><a href="{% url 'quotes:results' %}">Générer citation</a></button>
+            <div class="cat-selection">
+                <button class="btn-cat-selection">Politique</button>
+                <button class="btn-cat-selection">Inspirationnel</button>
+                <button class="btn-cat-selection">Film</button>
+                <button class="btn-cat-selection">Humour</button>
+            </div>
 
-        <button class="btn-return"><a href="{% url 'quotes:index' %}"><< Retour</a></button>
+            <button class="btn-return"><a href="{% url 'quotes:index' %}"><< Retour</a></button>
 
-    {% else %}
-        <p> Il n'y a pas de citations disponible actuellement.</p>
-    {% endif %}
-
+        {% else %}
+            <p> Il n'y a pas de citations disponible actuellement.</p>
+        {% endif %}
+    </container>
 
 {% endblock %}

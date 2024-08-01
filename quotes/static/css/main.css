@@ -32,6 +32,11 @@ h2 {
     margin-bottom: 60px;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
 .instruction-text {
     align-items: center;
     display: flex;
@@ -58,11 +63,29 @@ a {
     align-items: start;
     background-color: crimson;
     margin-left: 15px;
+    margin-top: 20%;
 }
 
 .btn-return:hover {
     background-color: red;
     background-size: 80px;
+}
+
+.btn-cat-selection {
+    align-items: center;
+    background-color: #e6e95b;
+    border-radius: 8%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 3% 5%;
+}
+
+.cat-selection {
+    align-items: center;
+    display: flex;
+    padding-top: 25px;
+    margin-top: 10%;
 }
 
 .quote-result-page {
@@ -104,7 +127,3 @@ a {
     margin-top: 20px;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-}
