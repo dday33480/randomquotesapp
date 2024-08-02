@@ -14,10 +14,36 @@ This is a beginners app to get used to database connections and Git commands.
 ---
 
 
-### Tech Stack
+## Tech Stack
 
 * ![python](https://img.shields.io/badge/python-3.10-blue)
-* Django 5.0
-* SQLite 3.37
+* ![django](https://img.shield.io:badge/django-5.0-blue)
+* ![sqlite](https://img.shield.io:badge/sqlite-3.37-blue)
+* ![robotframework](https://img.shield.io/badge/robotframework-7.0-blue)
+* ![selenium](https://img.shield.io/badge/selenium-4.23-blue)
+
+---
+
+## Database
+
+### Create SQLite DB superuser
+`python3 manage.py createsuperuser`
+
+---
+
+## Website
+
+### Run the site (local)
+`python3 manage.py runserver`
+
+### Access back office
+`[localhost]/admin`
+
+---
+
+## Tests
+
+### Run tests
+`robot -d testResults tests/navigation-test.robot`
 
 
