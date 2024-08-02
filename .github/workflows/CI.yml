@@ -30,5 +30,8 @@ jobs:
       - name: Apply migrations
         run: python manage.py migrate
 
+      - name: Serve website
+        run: python manage.py runserver
+
       - name: Run tests
         run: robot -d testResults tests/navigation-test.robot
