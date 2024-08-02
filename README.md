@@ -16,8 +16,8 @@ This is a beginners app to get used to database connections and Git commands.
 
 ### Tech Stack
 
-* ![python](https://www.python.org/static/community_logos/python-logo-inkscape.svg)
-* Django 5.0.2
-* SQLite 3.37.2
+![python](https://im.shields.io/badge/python-3.10-blue)
+Django 5.0
+SQLite 3.37
 
 
