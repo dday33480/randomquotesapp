@@ -17,10 +17,10 @@ This is a beginners app to get used to database connections and Git commands.
 ## Tech Stack
 
 * ![python](https://img.shields.io/badge/python-3.10-blue)
-* ![django](https://img.shield.io:badge/django-5.0-blue)
-* ![sqlite](https://img.shield.io:badge/sqlite-3.37-blue)
-* ![robotframework](https://img.shield.io/badge/robotframework-7.0-blue)
-* ![selenium](https://img.shield.io/badge/selenium-4.23-blue)
+* ![django](https://img.shields.io/badge/django-5.0-blue)
+* ![sqlite](https://img.shields.io/badge/sqlite-3.37-blue)
+* ![robotframework](https://img.shields.io/badge/robotframework-7.0-blue)
+* ![selenium](https://img.shields.io/badge/selenium-4.23-blue)
 
 ---
 
