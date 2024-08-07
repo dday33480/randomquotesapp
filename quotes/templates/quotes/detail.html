@@ -1,24 +1,25 @@
 {% extends "../base/main.html" %}
 
 {% block template %}
-    <container class=""detail-page-container>
+    <container class="detail-page-container">
         <h2 class="col-xs-1 text-center">Choississez une catégorie de citation</h2>
 
 
         {% if quote_count > 0 %}
 
             <div class="cat-selection">
-                <button class="btn-cat-selection"><a href="{% url 'quotes:results' %}?category=2">Politique</a></button>
-                <button class="btn-cat-selection"><a href="{% url 'quotes:results' %}?category=3">Inspirationnel</a></button>
-                <button class="btn-cat-selection"><a href="{% url 'quotes:results' %}?category=4">Film</a></button>
-                <button class="btn-cat-selection"><a href="{% url 'quotes:results' %}?category=1">Humour</a></button>
+                <a class="btn-cat-selection" href="{% url 'quotes:results' %}?category=2">Politique</a>
+                <a class="btn-cat-selection" href="{% url 'quotes:results' %}?category=3">Inspirationnel</a>
+                <a class="btn-cat-selection" href="{% url 'quotes:results' %}?category=4">Film</a>
+                <a class="btn-cat-selection" href="{% url 'quotes:results' %}?category=1">Humour</a>
             </div>
 
             <h2 class="col-xs-1 text-center">Sinon générez une citation aléatoire peux importe la catégorie</h2>
+            <a class="btn col-xl-2" href="{% url 'quotes:results' %}">Générer citation</a>
 
-            <button class="btn"><a href="{% url 'quotes:results' %}">Générer citation</a></button>
-
-            <button class="btn-return"><a href="{% url 'quotes:index' %}"><< Retour</a></button>
+            <div class="nav-btn">
+                <a class="btn-return" href="{% url 'quotes:index' %}"><< Retour</a>
+            </div>
 
         {% else %}
             <p> Il n'y a pas de citations disponible actuellement.</p>

@@ -1,39 +1,41 @@
 {% extends "../base/main.html" %}
 
 {% block template %}
-    <div class="quote-result-page" style="background-image: url( '{{ background }}')">
-        <div class="container-fluid">
-            <div class="col align-self-center quote-result">
-                <div id="quote">
-                    <p>" {{ random_quote }} "</p>
-                </div>
+    <container class="results-page-container">
+        <div class="quote-result-page" style="background-image: url( '{{ background }}')">
+            <div class="container-fluid">
+                <div class="col align-self-center quote-result">
+                    <div id="quote">
+                        <p>" {{ random_quote }} "</p>
+                    </div>
 
-                <div id="quote-detail">
-                    {% if author == "Inconnu" and year < 1 %}
-                        <p> Auteur Inconnu - Année Inconnu</p>
-                    {% elif author == "Inconnu" and year > 0 %}
-                        <p>Auteur Inconnu - {{ year }}</p>
-                    {% elif author != "Inconnu" and year < 1 %}
-                        <p>{{ author }} - Année Inconnu</p>
-                    {% else %}
-                        <p>{{ author }} - {{ year }}</p>
-                    {% endif %}
+                    <div id="quote-detail">
+                        {% if author == "Inconnu" and year < 1 %}
+                            <p> Auteur Inconnu - Année Inconnu</p>
+                        {% elif author == "Inconnu" and year > 0 %}
+                            <p>Auteur Inconnu - {{ year }}</p>
+                        {% elif author != "Inconnu" and year < 1 %}
+                            <p>{{ author }} - Année Inconnu</p>
+                        {% else %}
+                            <p>{{ author }} - {{ year }}</p>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="result-cat-selection">
-        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=2">Politique</a></button>
-        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=3">Inspirationnel</a></button>
-        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=4">Film</a></button>
-        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}?category=1">Humour</a></button>
-        <button class="btn-result-cat-selection"><a href="{% url 'quotes:results' %}">Tous</a></button>
-    </div>
+        <div class="result-cat-selection">
+            <a class="btn-result-cat-selection" href="{% url 'quotes:results' %}?category=2">Politique</a>
+            <a class="btn-result-cat-selection" href="{% url 'quotes:results' %}?category=3">Inspirationnel</a>
+            <a class="btn-result-cat-selection" href="{% url 'quotes:results' %}?category=4">Film</a>
+            <a class="btn-result-cat-selection" href="{% url 'quotes:results' %}?category=1">Humour</a>
+            <a class="btn-result-cat-selection" href="{% url 'quotes:results' %}">Tous</a>
+        </div>
 
-    <div class="results-navigation">
-        <button class="btn-home"><a href="{% url 'quotes:index' %}">Acceuil</a></button>
-        <button class="btn-return"><a href="{% url 'quotes:detail' %}"><< Retour</a></button>
-    </div>
+        <div class="nav-btn">
+            <a class="btn-home" href="{% url 'quotes:index' %}">Acceuil</a>
+            <a class="btn-return" href="{% url 'quotes:detail' %}"><< Retour</a>
+        </div>
+    </container>
 
 {% endblock %}
