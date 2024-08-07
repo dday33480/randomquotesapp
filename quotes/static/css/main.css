@@ -140,7 +140,7 @@ a {
 }
 
 .btn-cat-selection:hover, .btn-cat-selection:active, .btn:hover,  .btn:active {
-    background-color: #2e8cfc;
+    background-color:skyblue;
     border-radius: 90%;
 }
 
@@ -164,7 +164,8 @@ a {
 }
 
 .btn-result-cat-selection:hover {
-    background-color: #2e8cfc;
+    background-color: skyblue;
+    border-radius: 90%;
 }
 
 .result-cat-selection {
