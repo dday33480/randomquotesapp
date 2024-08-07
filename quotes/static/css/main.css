@@ -6,6 +6,40 @@
     font-style: normal;
 }
 
+@keyframes btn-animation {
+    from {background-color: #F2D341;}
+    to {background-color: green;}
+}
+
+#btn-animation {
+    animation: btn-animation 6s infinite;
+}
+
+@keyframes bounce{
+    0%, 25%, 50%, 75%, 100% {
+        transform: translateY(0);
+    }
+    15%, 40% {
+        transform: translateY(-20px);
+    }
+    65%, 80% {
+        transform: translateY(-10px);
+    }
+    95% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 body {
     background: linear-gradient(0deg, rgba(40,38,39,1) 0%, rgba(11,67,133,1) 100%);
     background-repeat: no-repeat;
@@ -77,6 +111,7 @@ a {
 .btn-return:hover {
     background-color: green;
     background-size: 80px;
+    animation: bounce 0.5s linear;
 }
 
 .btn-home {
@@ -91,11 +126,12 @@ a {
 .btn-home:hover {
     background-color: green;
     background-size: 80px;
+    animation: spin 1s;
 }
 
 .btn-cat-selection, .btn {
     align-items: center;
-    background-color: #e6e95b;
+    background-color: #F2D341;
     border-radius: 8%;
     display: flex;
     justify-content: center;
@@ -103,8 +139,9 @@ a {
     padding: 3% 5%;
 }
 
-.btn-cat-selection:hover, .btn:hover {
+.btn-cat-selection:hover, .btn-cat-selection:active, .btn:hover,  .btn:active {
     background-color: #2e8cfc;
+    border-radius: 90%;
 }
 
 .cat-selection {
@@ -118,7 +155,7 @@ a {
 
 .btn-result-cat-selection {
     align-items: center;
-    background-color: #e6e95b;
+    background-color: #F2D341;
     border-radius: 8%;
     display: flex;
     justify-content: center;
