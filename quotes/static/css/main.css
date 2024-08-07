@@ -42,6 +42,13 @@ h2 {
     margin-bottom: 60px;
 }
 
+#header-text {
+    text-decoration: none;
+    color: white;
+    font-size: 155%;
+    font-weight: 700;
+}
+
 #footer {
     bottom: 0;
     width: 100%;
