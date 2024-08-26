@@ -26,18 +26,23 @@ def detail(request):
 def results(request):
 
     # Get the chosen category
-    category_id = request.GET.get('category')
+    quote_category = request.GET.get('category')
 
-    if category_id:
-        category = get_object_or_404(QuoteCategory, id=category_id)
+    if quote_category:
+        category = get_object_or_404(QuoteCategory, category=quote_category)
         quote_list = list(Quote.objects.filter(category=category))
     else:
         quote_list = list(Quote.objects.all())
 
     # Generate the random quote from the specified category
-    random_quote = random.choice(quote_list)
-    author = random_quote.quote_author
-    year = random_quote.quote_year
+    if quote_list:
+        random_quote = random.choice(quote_list)
+        author = random_quote.quote_author
+        year = random_quote.quote_year
+    else:
+        random_quote = None
+        author = None
+        year = None
 
     img = [
             "../../static/images/background-images/img-1.jpg",
@@ -55,5 +60,7 @@ def results(request):
         "author": author,
         "year": year,
         "background": bg_img,
+        "quote_category": quote_category,
     }
+
     return render(request, "quotes/results.html", context)
