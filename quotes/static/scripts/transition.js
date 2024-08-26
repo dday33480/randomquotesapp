@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.container');
 
-    container.classList.add('loaded');
+    const element = /results/.test(window.location.href) 
+        ? '.quote-result-page'
+        : /detail/.test(window.location.href)
+            ? '.detail-page-container'
+            :'.homepage-container';
+            
+            document.querySelector(element).classList.add('loaded');
 });

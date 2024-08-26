@@ -70,15 +70,10 @@ body {
 }
 
 .container {
-    opacity: 0;
     position: relative;
     min-height: 100vh;
     min-width: 90%;
     transition: opacity 1s ease-in-out;
-}
-
-.container.loaded {
-    opacity: 1;
 }
 
 .content-wrap {
@@ -114,9 +109,20 @@ h2 {
     height: 2.5rem;
 }
 
-.instruction-text {
-    align-items: center;
-    display: flex;
+.homepage-container{
+    opacity: 0;
+}
+
+.homepage-container.loaded{
+    opacity: 1;
+}
+
+.detail-page-container{
+    opacity: 0;
+}
+
+.detail-page-container.loaded{
+    opacity: 1;
 }
 
 a {
@@ -211,10 +217,15 @@ a {
 }
 
 .quote-result-page {
+    opacity: 0;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 30px;
     min-height: 75vh;
+}
+
+.quote-result-page.loaded {
+    opacity: 1;
 }
 
 .quote-result {
