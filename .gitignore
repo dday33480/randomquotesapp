@@ -1,3 +1,5 @@
 *.pyc
 --pycache--/
 testResults/*
+*/pyvenv.cfg
+*/lib/*
