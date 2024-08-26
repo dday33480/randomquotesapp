@@ -164,6 +164,10 @@ a {
     padding: 3% 5%;
 }
 
+#btn-animation {
+    margin-top: 3%;
+}
+
 .btn-cat-selection:hover, .btn-cat-selection:active, .btn:hover,  .btn:active {
     background-color:skyblue;
     border-radius: 90%;
