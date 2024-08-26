@@ -7,5 +7,6 @@ class QuoteTableAdmin(admin.ModelAdmin):
     list_filter = ['category']
 
 admin.site.register(Quote, QuoteTableAdmin)
+admin.site.register(QuoteCategory)
 
 
