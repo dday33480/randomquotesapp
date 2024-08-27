@@ -31,11 +31,11 @@ jobs:
         run: python manage.py migrate
 
       - name: Tests with Robotframework
-        run: robot .
+        run: robot --outputdir testResults tests/naviagtion-test.robot --brower headless-chrome
 
-      - name: Test Report
+      - name: Test Results
         uses: actions/upload-artifact@v4
         if: success() || failure()
         with:
             name: '${{ github.workspace }}/tests'
-            path: '${{ github.workspace }}/tests/results/test-results.html'
+            path: '${{ github.workspace }}/testResults/report.html'
