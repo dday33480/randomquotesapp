@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${BROWSER}    chrome
+${BROWSER}    headlesschrome
 ${HEADLESS}    false
 
 *** Keywords ***
