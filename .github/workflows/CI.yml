@@ -27,12 +27,6 @@ jobs:
           pip install robotframework-seleniumLibrary
           pip install robotframework
 
-      - name: Download Chrome Driver
-        run: wget -O chromedriver https://chromedriver.storage.googleapis.com/108.0.5359.71/chromedriver_linux64.zip
-
-      - name: Extract ChromeDriver
-        run: unzip chromedriver_linux64.zip
-
       - name: Apply migrations
         run: python manage.py migrate
 
@@ -44,4 +38,4 @@ jobs:
         if: success() || failure()
         with:
             name: '${{ github.workspace }}/tests'
-            path: '${{ github.workspace }}/tests/results'
+            path: '${{ github.workspace }}/tests/results/test-results.html'
