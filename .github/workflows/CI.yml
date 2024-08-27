@@ -31,7 +31,7 @@ jobs:
         run: python manage.py migrate
 
       - name: Tests with Robotframework
-        run: robot --outputdir testResults --browser headless-chrome tests/naviagtion-test.robot
+        run: robot --outputdir testResults tests/naviagtion-test.robot
 
       - name: Test Results
         uses: actions/upload-artifact@v4
