@@ -12,31 +12,38 @@ Go to website
     Sleep    5
 
 Navigate on website to generate quote
+    Scroll Element Into View    id:btn-animation
     Click Element    //*[@id="btn-animation"]
+    Wait Until Element Is Visible    class: btn.col-xl-2    10s
+    Scroll Element Into View    css: .btn.col-xl-2
+    Click Element    css: .btn.col-xl-2
     Sleep    5
-    Click Element    link: Générer citation
-    Sleep    5
-    Element Should Be Visible    //*[@class="btn-return"]
     Location Should Contain    /results
+    Wait Until Element Is Visible    css: #quote
+    Element Should Be Visible    css: #quote
     Sleep    5
 
 Navigate back to details page
-    Scroll Element Into View    class:btn-return
-    Sleep    5   
+    Scroll Element Into View    class: btn-return
+    Wait Until Element Is Visible    class: btn-return    10s
     Click Element    //*[@class="btn-return"]
     Sleep    5
     Location Should Contain    /detail
-    Click Element    link: Générer citation
+    Wait Until Element Is Visible    class: btn.col-xl-2    10s
+    Scroll Element Into View    css: .btn.col-xl-2
+    Click Element    css: .btn.col-xl-2
     Location Should Contain    /results
     Sleep    5
 
 Naviagate back to home page
     Scroll Element Into View    class:btn-home
+    Wait Until Element Is Visible    class: btn-home    10s
     Click Element    //*[@class="btn-home"]
     Location Should Be    https://citations-aleatoires.onrender.com/
     Sleep    5
 
 Verify different categories available
+    Scroll Element Into View    id:btn-animation
     Click Element    //*[@id="btn-animation"]
     Sleep    5
     Location Should Contain    /detail
@@ -68,6 +75,8 @@ Verify different categories available
     Scroll Element Into View    class:btn-return
     Sleep    5   
     Click Element    //*[@class="btn-return"]
+    Scroll Element Into View    link: Générer citation
+    Wait Until Element Is Visible    link: Générer citation
     Click Element    link: Générer citation
     Location Should Contain    /results
     Element Should Not Contain    //*[@id="quote"]    None
