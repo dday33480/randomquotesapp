@@ -196,6 +196,18 @@ a {
     border-radius: 90%;
 }
 
+@media only screen and (max-width: 650px) {
+    .btn-cat-selection {
+        align-items: center;
+        background-color: #F2D341;
+        border-radius: 8%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1%;
+        padding: 3% 5%;
+    }
+}
+
 .cat-selection {
     align-items: center;
     display: flex;
