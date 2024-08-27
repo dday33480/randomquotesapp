@@ -37,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v4
         if: success() || failure()
         with:
-            name: Test Results
-            path: test-results.html
+            name: '${{ github.workspace }}/tests'
+            path: '${{ github.workspace }}/tests/results'
