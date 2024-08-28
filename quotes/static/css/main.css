@@ -84,7 +84,7 @@ h1 {
     border-bottom-style: solid;
     border-color: black;
     border-width: 5px;
-    font-size: 6vw;
+    font-size: 4vw;
     margin: 0;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -107,7 +107,7 @@ h2 {
 #header-text {
     text-decoration: none;
     color: white;
-    font-size: 90%;
+    font-size: 4.5vw;
     font-weight: 700;
 }
 
@@ -260,7 +260,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 30px;
-    min-height: 75vh;
+    min-height: 70vh;
 }
 
 .quote-result-page.loaded {
@@ -294,7 +294,7 @@ a {
 #quote {
     color: black;
     font-family: 'my_soulregular', 'Times New Roman', Times, serif;
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: 800;
 }
 
@@ -311,7 +311,7 @@ a {
     color: black;
     display: flex;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
     justify-content: right;
 }
 
