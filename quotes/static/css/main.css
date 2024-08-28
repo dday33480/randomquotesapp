@@ -270,10 +270,10 @@ a {
 .quote-result {
     background-color: antiquewhite;
     height: auto;
-    width: 30%;
+    width: 50%;
     padding: 50px 30px 20px 30px;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -294,16 +294,35 @@ a {
 #quote {
     color: black;
     font-family: 'my_soulregular', 'Times New Roman', Times, serif;
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: 800;
+}
+
+@media only screen and (max-width: 650px) {
+    #quote {
+        color: black;
+        font-family: 'my_soulregular', 'Times New Roman', Times, serif;
+        font-size: 5vw;
+        font-weight: 800;
+    }
 }
 
 #quote-detail {
     color: black;
     display: flex;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 5vw;
+    font-size: 2vw;
     justify-content: right;
+}
+
+@media only screen and (max-width: 650px) {
+    #quote-detail {
+        color: black;
+        display: flex;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4vw;
+        justify-content: right;
+    }
 }
 
 .nav-btn {
