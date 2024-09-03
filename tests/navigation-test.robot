@@ -3,12 +3,11 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${BROWSER}    googlechrome
-${HEADLESS}    false
+${BROWSER}    headlesschrome
 
 *** Keywords ***
 Go to website
-    Open Browser    https://citations-aleatoires.onrender.com/    ${BROWSER}
+    Open Browser    https://citations-aleatoires.onrender.com/
     Sleep    5
 
 Navigate on website to generate quote
