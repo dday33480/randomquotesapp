@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${BROWSER}    headlesschrome
+${BROWSER}    chrome
 ${HEADLESS}    false
 
 *** Keywords ***
@@ -19,7 +19,7 @@ Navigate on website to generate quote
     Click Element    css: .btn.col-xl-2
     Sleep    5
     Wait Until Element Is Visible    css: #quote    30s
-    Element Should Be Visible    css: #quote
+    Element Should Be Visible    //*[@id="quote"]
     Location Should Contain    /results
     Sleep    5
 
