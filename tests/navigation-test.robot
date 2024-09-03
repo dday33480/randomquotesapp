@@ -18,9 +18,9 @@ Navigate on website to generate quote
     Scroll Element Into View    css: .btn.col-xl-2
     Click Element    css: .btn.col-xl-2
     Sleep    5
-    Location Should Contain    /results
     Wait Until Element Is Visible    css: #quote
     Element Should Be Visible    css: #quote
+    Location Should Contain    /results
     Sleep    5
 
 Navigate back to details page
