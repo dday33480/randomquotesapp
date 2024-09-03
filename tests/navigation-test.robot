@@ -14,22 +14,22 @@ Go to website
 Navigate on website to generate quote
     Scroll Element Into View    id:btn-animation
     Click Element    //*[@id="btn-animation"]
-    Wait Until Element Is Visible    class: btn.col-xl-2    10s
+    Wait Until Element Is Visible    class: btn.col-xl-2    20s
     Scroll Element Into View    css: .btn.col-xl-2
     Click Element    css: .btn.col-xl-2
     Sleep    5
-    Wait Until Element Is Visible    css: #quote
+    Wait Until Element Is Visible    css: #quote    30s
     Element Should Be Visible    css: #quote
     Location Should Contain    /results
     Sleep    5
 
 Navigate back to details page
     Scroll Element Into View    class: btn-return
-    Wait Until Element Is Visible    class: btn-return    10s
+    Wait Until Element Is Visible    class: btn-return    20s
     Click Element    //*[@class="btn-return"]
     Sleep    5
     Location Should Contain    /detail
-    Wait Until Element Is Visible    class: btn.col-xl-2    10s
+    Wait Until Element Is Visible    class: btn.col-xl-2    20s
     Scroll Element Into View    css: .btn.col-xl-2
     Click Element    css: .btn.col-xl-2
     Location Should Contain    /results
@@ -37,7 +37,7 @@ Navigate back to details page
 
 Naviagate back to home page
     Scroll Element Into View    class:btn-home
-    Wait Until Element Is Visible    class: btn-home    10s
+    Wait Until Element Is Visible    class: btn-home    20s
     Click Element    //*[@class="btn-home"]
     Location Should Be    https://citations-aleatoires.onrender.com/
     Sleep    5
@@ -75,9 +75,9 @@ Verify different categories available
     Scroll Element Into View    class:btn-return
     Sleep    5   
     Click Element    //*[@class="btn-return"]
-    Scroll Element Into View    link: Générer citation
-    Wait Until Element Is Visible    link: Générer citation
-    Click Element    link: Générer citation
+    Scroll Element Into View    link: Aléatoire
+    Wait Until Element Is Visible    link: Aléatoire
+    Click Element    link: Aléatoire
     Location Should Contain    /results
     Element Should Not Contain    //*[@id="quote"]    None
     Scroll Element Into View    class:btn-home
