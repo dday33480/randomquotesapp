@@ -96,28 +96,11 @@ h2 {
     margin-bottom: 60px;
 }
 
-@media only screen and (max-width: 650px) {
-    h2 {
-        font-size: 6vw;
-        margin-top: 50px;
-        margin-bottom: 60px;
-    }
-}
-
 #header-text {
     text-decoration: none;
     color: white;
     font-size: 4.5vw;
     font-weight: 700;
-}
-
-@media only screen and (max-width: 650px) {
-    #header-text {
-        text-decoration: none;
-        color: white;
-        font-size: 15vw;
-        font-weight: 700;
-    }
 }
 
 #footer {
@@ -177,7 +160,26 @@ a {
     animation: spin 1s;
 }
 
-.btn-cat-selection, .btn {
+.cat-selection {
+    align-items: center;
+    display: flex;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+    padding-top: 1%;
+    margin-top: 1%;
+}
+
+.btn-cat-selection {
+    align-items: center;
+    background-color: #F2D341;
+    border-radius: 8%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 3% 5%;
+}
+
+.btn {
     align-items: center;
     background-color: #F2D341;
     border-radius: 8%;
@@ -194,34 +196,6 @@ a {
 .btn-cat-selection:hover, .btn-cat-selection:active, .btn:hover,  .btn:active {
     background-color:skyblue;
     border-radius: 90%;
-}
-
-@media only screen and (max-width: 650px) {
-    .btn-cat-selection {
-        background-color: #F2D341;
-        border-radius: 8%;
-        margin-bottom: 1%;
-        padding: 3% 5%;
-    }
-}
-
-.cat-selection {
-    align-items: center;
-    display: flex;
-    padding-bottom: 5%;
-    margin-bottom: 5%;
-    padding-top: 1%;
-    margin-top: 1%;
-}
-
-@media only screen and (max-width: 650px) {
-    .cat-selection {
-        display: block;
-        padding-bottom: 5%;
-        margin-bottom: 5%;
-        padding-top: 1%;
-        margin-top: 1%;
-    }
 }
 
 .btn-result-cat-selection {
@@ -278,33 +252,11 @@ a {
     transform: translate(-50%, -50%);
 }
 
-@media only screen and (max-width: 650px) {
-    .quote-result {
-        background-color: antiquewhite;
-        height: auto;
-        width: 65%;
-        padding: 50px 30px 20px 30px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
 #quote {
     color: black;
     font-family: 'my_soulregular', 'Times New Roman', Times, serif;
     font-size: 2vw;
     font-weight: 800;
-}
-
-@media only screen and (max-width: 650px) {
-    #quote {
-        color: black;
-        font-family: 'my_soulregular', 'Times New Roman', Times, serif;
-        font-size: 5vw;
-        font-weight: 800;
-    }
 }
 
 #quote-detail {
@@ -315,7 +267,59 @@ a {
     justify-content: right;
 }
 
-@media only screen and (max-width: 650px) {
+.nav-btn {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 3px;
+}
+
+@media (max-width: 650px) {
+    h2 {
+        font-size: 6vw;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+
+    #header-text {
+        text-decoration: none;
+        color: white;
+        font-size: 5vw;
+        font-weight: 700;
+    }
+
+    .cat-selection {
+        display: inline;
+        padding-bottom: 5%;
+        margin-bottom: 5%;
+        padding-top: 1%;
+        margin-top: 1%;
+    }
+
+    .btn-cat-selection {
+        background-color: #F2D341;
+        border-radius: 5%;
+        margin-bottom: 3%;
+        padding: 3% 5%;
+    }
+
+    .quote-result {
+        background-color: antiquewhite;
+        height: auto;
+        width: 65%;
+        padding: 50px 30px 20px 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #quote {
+        color: black;
+        font-family: 'my_soulregular', 'Times New Roman', Times, serif;
+        font-size: 5vw;
+        font-weight: 800;
+    }
+
     #quote-detail {
         color: black;
         display: flex;
@@ -324,10 +328,3 @@ a {
         justify-content: right;
     }
 }
-
-.nav-btn {
-    display: flex;
-    margin-bottom: 30px;
-    padding: 3px;
-}
-
