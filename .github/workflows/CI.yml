@@ -26,6 +26,7 @@ jobs:
           pip install selenium
           pip install robotframework-seleniumLibrary
           pip install robotframework
+          pip install webdriver-manager
 
       - name: Apply migrations
         run: python manage.py migrate
