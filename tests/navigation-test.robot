@@ -1,13 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    webdriver    MODULE    ./webdriver
 
 
 *** Variables ***
-${BROWSER}   chrome
 
 *** Keywords ***
 Go to website
-    Open Browser    https://citations-aleatoires.onrender.com/    ${BROWSER}
     Sleep    5
 
 Navigate on website to generate quote
@@ -87,11 +86,14 @@ Verify different categories available
 
 *** Test Cases ***
 Test website naviagation
+    ${driver} = Get ChromeDriver
+    Open Browser    https://citations-aleatoires.onrender.com/    ${driver}
     Go to website
     Navigate on website to generate quote
     Navigate back to details page
     Naviagate back to home page
     Verify different categories available
+    Close Browser    ${driver}
     
 
 
