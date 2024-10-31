@@ -1,7 +1,7 @@
 import random
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities   
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 def get_chromedriver(headless=False, user_agents=None):

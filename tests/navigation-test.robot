@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    webdriver    MODULE    ./webdriver
+Library    webdriver    MODULE    ../webdriver
 
 
 *** Variables ***
