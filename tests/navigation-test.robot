@@ -7,6 +7,7 @@ ${driver}    headlesschrome
 *** Keywords ***
 Go to website
     Open Browser    https://citations-aleatoires.onrender.com/    ${driver}
+    Maximize Browser Window
     Sleep    5
 
 Navigate on website to generate quote
@@ -26,7 +27,7 @@ Navigate back to details page
     Click Element    //*[@class="btn-return"]
     Sleep    5
     Location Should Contain    /detail
-    Wait Until Element Is Visible    class: cat-selection    20s
+    Wait Until Element Is Visible    class: cat-selection    8s
     Scroll Element Into View    id:random-choice
     Click Element    id:random-choice
     Location Should Contain    /results
