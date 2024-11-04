@@ -16,7 +16,7 @@ Navigate on website to generate quote
     Scroll Element Into View    css: .btn.col-xl-2
     Click Element    css: .btn.col-xl-2
     Sleep    5
-    Wait Until Element Is Visible    id:quote    30s
+    Wait Until Element Is Visible    class: quote-result-page.loaded    30s
     Element Should Be Visible    //*[@id="quote"]
     Location Should Contain    /results
     Sleep    5
