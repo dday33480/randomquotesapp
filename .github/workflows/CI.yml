@@ -28,6 +28,9 @@ jobs:
           pip install robotframework
           pip install webdriver-manager
 
+      - name: Make migrations
+        run: python manage.py makemigrations
+
       - name: Apply migrations
         run: python manage.py migrate
 
