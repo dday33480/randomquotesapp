@@ -27,9 +27,9 @@ Navigate back to details page
     Click Element    //*[@class="btn-return"]
     Sleep    5
     Location Should Contain    /detail
-    Wait Until Element Is Visible    class: btn.col-xl-2    20s
-    Scroll Element Into View    css: .btn.col-xl-2
-    Click Element    css: .btn.col-xl-2
+    Wait Until Element Is Visible    class: cat-selection    20s
+    Scroll Element Into View    id:random-choice
+    Click Element    id:random-choice
     Location Should Contain    /results
     Sleep    5
 
