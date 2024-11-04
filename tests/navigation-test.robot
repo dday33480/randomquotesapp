@@ -1,14 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    SeleniumDrivers.robot
-
-Suite Setup    Update Chrome Webdriver
 
 *** Variables ***
+${driver}    headlesschrome
 
 *** Keywords ***
 Go to website
-    Open Browser    https://citations-aleatoires.onrender.com/    chrome
+    Open Browser    https://citations-aleatoires.onrender.com/    ${driver}
     Sleep    5
 
 Navigate on website to generate quote
